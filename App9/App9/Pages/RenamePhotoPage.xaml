@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App9.Pages.RenamePhotoPage">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="20" Margin="10,10" >
+            <StackLayout.Resources>
+                <ResourceDictionary>
+                    <Style TargetType="Button">
+                        <Setter Property="CornerRadius" Value="25" />
+                    </Style>
+                </ResourceDictionary>
+            </StackLayout.Resources>
+            <Label Text="{Binding ChangeOldName}" />
+            <Label Text="{Binding Title}" />
+            <Entry x:Name="entryName" TextChanged="EntryName_TextChanged"/>
+            <Button x:Name="renameButton" Text="Изменить" Clicked="RenamePhoto" />
+            <Button Text="Назад" Clicked="Return" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

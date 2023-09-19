@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App9.Pages.PhotoPage"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout.Resources>
+                <ResourceDictionary>
+                    <Style TargetType="Label">
+                        <Setter Property="VerticalTextAlignment" Value="Center" />
+                        <Setter Property="HorizontalTextAlignment" Value="Center" />
+                        <Setter Property="FontSize" Value="Large" />
+                    </Style>
+                </ResourceDictionary>
+            </StackLayout.Resources>
+            <Label Text="{Binding ImageTitle}" VerticalOptions="Start"  />
+            <Image Source="{Binding ImageSrc}" Aspect="AspectFit" HeightRequest="400" />
+            <Label Text="{Binding ImageCreatedDate}" />
+            <Button Text="Назад" Clicked="Return" CornerRadius="25" HorizontalOptions="Center" WidthRequest="200" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

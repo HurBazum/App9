@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App9.MainPage"
+             NavigationPage.HasNavigationBar="False">
+
+    <StackLayout 
+            x:Name="pinStack"
+            VerticalOptions="Center"
+            Spacing="20"
+            Padding="20,0,0,0"
+            WidthRequest="200"
+            HorizontalOptions="Center" >
+        <Label 
+                x:Name="pinLabel"
+                Text="Введите pin-код"
+                HorizontalTextAlignment="Center"
+                FontSize="Caption" 
+                TextColor="DarkKhaki" />
+        <Entry
+                x:Name="pinEntry"
+                MaxLength="4"
+                Keyboard="Numeric"
+                FontSize="Title"
+                CharacterSpacing="10"
+                HorizontalTextAlignment="Center"
+                TextChanged="PinEntry_TextChanged"/>
+        <Button 
+                x:Name="accessButton" 
+                Text="Войти" 
+                CornerRadius="25" 
+                Clicked="TryToAccess"
+                IsEnabled="false" />
+        <Label x:Name="errorMessage"
+                   Text=""
+                   TextColor="Magenta"
+                   HorizontalTextAlignment="Center"/>
+    </StackLayout>
+
+</ContentPage>
