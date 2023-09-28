@@ -10,6 +10,9 @@ using Xamarin.Forms.Xaml;
 
 namespace App9.Pages
 {
+    /// <summary>
+    /// Создаёт копию фотографии с новым именем
+    /// </summary>
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class RenamePhotoPage : ContentPage
     {

@@ -49,6 +49,7 @@ namespace App9
             }
             else
             {
+                // чтоб не забыть
                 errorMessage.Text = $"Неверный пин-код: {Pin}";
             }
         }
